@@ -37,6 +37,18 @@ npm i vue-router --save
   - URL 해시를 사용하여 전체 URL을 시뮬레이트
   - URL이 변경될때 페이지가 다시 로드되지 않음
 
+### axios 설치
+
+```cmd
+npm i axios --save
+```
+
+### Vuex 설치
+
+```cmd
+npm i vuex
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
