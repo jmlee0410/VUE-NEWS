@@ -8,5 +8,11 @@ export default {
     },
     SET_ASK: function (state, ask) {
         state.ask = ask;
-    }
+    },
+    SET_USER: function (state, user) {
+        state.user = user;
+    },
+    SET_ITEM: function (state, item) {
+        state.item = item;
+    },
 }

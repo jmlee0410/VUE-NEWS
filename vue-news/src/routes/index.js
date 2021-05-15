@@ -6,6 +6,8 @@ import JobsView from '../views/JobsView.vue';
 import ItemView from '../views/ItemView.vue';
 import UserView from '../views/UserView.vue';
 
+
+
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
@@ -30,11 +32,11 @@ export const router = new VueRouter({
             component: JobsView,
         },
         {
-            path: '/item',
+            path: '/item/:id',
             component: ItemView,
         },
         {
-            path: '/user',
+            path: '/user/:id',
             component: UserView,
         },
     ]
