@@ -7,7 +7,9 @@
       {{ job.title }}
     </div> -->
 
-    <ul class="news-list">
+    <list-item />
+
+    <!-- <ul class="news-list">
       <li
         v-for="job in this.$store.state.jobs"
         :key="job.id"
@@ -30,51 +32,29 @@
           </small>
         </div>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <script>
+import ListItem from '../components/ListItem.vue'
 
 
 export default {
-  data() {
-    return {
+  components: { ListItem },
+  // data() {
+  //   return {
       
-    }
-  },
-  created() {
+  //   }
+  // },
+  // created() {
 
-    this.$store.dispatch('FETCH_JOBS');
+  //   this.$store.dispatch('FETCH_JOBS');
 
    
-  },
+  // },
 }
 </script>
 
-<style scoped>
-.news-list {
-  margin: 0;
-  padding: 0;
-}
-.post {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-}
-.points {
-  width: 80px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #42b883;
-}
-.news-title {
-  margin: 0;
-}
-.link-text {
-  color: #828282
-}
+<style>
 </style>

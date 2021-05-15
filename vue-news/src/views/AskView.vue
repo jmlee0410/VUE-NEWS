@@ -7,7 +7,10 @@
       {{ item.title }}
     </div> -->
 
-    <ul class="news-list">
+    <list-item />
+
+
+    <!-- <ul class="news-list">
       <li
         v-for="item in fetchedAsk"
         :key="item.id"
@@ -33,68 +36,51 @@
           </small>
         </div>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <script>
 
 // import { mapState, mapGetters } from 'vuex';
-import { mapGetters } from 'vuex';
+//import { mapGetters } from 'vuex';
+
+import ListItem from '../components/ListItem.vue'
 
 export default {
-  computed: {
 
-    // #4
-    ...mapGetters([
-      'fetchedAsk'
-    ])
+  components: {
+    ListItem
+  }
+  // computed: {
 
-    // #3
-    // ...mapGetters({
-    //   fetchedAsk: 'fetchedAsk'
-    // }),
+  //   // #4
+  //   ...mapGetters([
+  //     'fetchedAsk'
+  //   ])
+
+  //   // #3
+  //   // ...mapGetters({
+  //   //   fetchedAsk: 'fetchedAsk'
+  //   // }),
 
 
-    // #2
-    // ...mapState({
-    //   ask: state => state.ask
-    // })
+  //   // #2
+  //   // ...mapState({
+  //   //   ask: state => state.ask
+  //   // })
 
-    // #1
-    // ask() {
-    //   return this.$store.state.ask;
-    // }
-  },
-  created() {
-    this.$store.dispatch('FETCH_ASK');
-  },
+  //   // #1
+  //   // ask() {
+  //   //   return this.$store.state.ask;
+  //   // }
+  // },
+  // created() {
+  //   this.$store.dispatch('FETCH_ASK');
+  // },
 }
 </script>
 
-<style scoped>
-.news-list {
-  margin: 0;
-  padding: 0;
-}
-.post {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-}
-.points {
-  width: 80px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #42b883;
-}
-.news-title {
-  margin: 0;
-}
-.link-text {
-  color: #828282
-}
+<style>
+
 </style>
